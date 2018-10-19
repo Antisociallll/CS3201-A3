@@ -75,9 +75,9 @@ def main():
             i = i+2  # update the counter
 
         # form the population of next generation
-        population, fitness = survivorSelection.mu_plus_lambda(population, fitness, offspring, offspring_fitness)
+#        population, fitness = survivorSelection.mu_plus_lambda(population, fitness, offspring, offspring_fitness)
 #        population, fitness = survivorSelection.replacement(population, fitness, offspring, offspring_fitness)
-#        population, fitness = survivorSelection.random_uniform(population, fitness, offspring, offspring_fitness)
+        population, fitness = survivorSelection.random_uniform(population, fitness, offspring, offspring_fitness)
         
         gen = gen + 1  # update the generation counter
         print("generation", gen, ": best fitness", max(fitness), "average fitness", sum(fitness)/len(fitness))
